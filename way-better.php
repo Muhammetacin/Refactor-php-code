@@ -2,42 +2,42 @@
 
 function orderPizza($pizzaType, $client)
 {
-    echo "<strong>Creating new order...</strong><br><br>";
+    echo '<strong>Creating new order...</strong><br><br>';
 
     $pizzaPrice = calculateCost($pizzaType);
-    $clientAddress = "unknown";
+    $clientAddress = 'unknown';
 
-    if ($client === "koen") {
-        $clientAddress = "a yacht in Antwerp";
-    } else if ($client === "manuele") {
-        $clientAddress = "somewhere in Belgium";
-    } else if ($client === "students") {
-        $clientAddress = "BeCode office";
+    if ($client === 'koen') {
+        $clientAddress = 'a yacht in Antwerp';
+    } else if ($client === 'manuele') {
+        $clientAddress = 'somewhere in Belgium';
+    } else if ($client === 'students') {
+        $clientAddress = 'BeCode office';
     }
 
-    $printAddress = "The address is: $clientAddress.";
-    $printPrice = "The bill is € $pizzaPrice.";
+    $printAddress = 'The address is: ' . $clientAddress . '.';
+    $printPrice = 'The bill is € ' . $pizzaPrice . '.';
 
-    $printOrder = "A " . $pizzaType . " pizza should be sent to " . $client . ".<br>"
-        . $printAddress . "<br>"
-        . $printPrice . "<br>";
+    $printOrder = 'A ' . $pizzaType . ' pizza should be sent to ' . $client . '.<br>'
+        . $printAddress . '<br>'
+        . $printPrice . '<br>';
 
     echo $printOrder;
-    echo "<i>Order finished.</i><br><br>";
+    echo '<i>Order finished.</i><br><br>';
 }
 
 function calculateCost($pizzaType)
 {
     $costPrice = 0;
 
-    if ($pizzaType === "marguerita") {
+    if ($pizzaType === 'marguerita') {
         $costPrice = 5;
-    } else if ($pizzaType === "golden") {
+    } else if ($pizzaType === 'golden') {
         $costPrice = 100;
-    } else if ($pizzaType === "calzone") {
+    } else if ($pizzaType === 'calzone') {
         $costPrice = 10;
-    } else if ($pizzaType === "hawaii") {
-        throw new Exception("There is no pizza type 'Hawaii'.");
+    } else if ($pizzaType === 'hawaii') {
+        throw new Exception('There is no pizza type "Hawaii".');
     }
 
     return $costPrice;
@@ -45,9 +45,9 @@ function calculateCost($pizzaType)
 
 function orderPizzaForAll()
 {
-    orderPizza("calzone", "koen");
-    orderPizza("marguerita", "manuele");
-    orderPizza("golden", "students");
+    orderPizza('calzone', 'koen');
+    orderPizza('marguerita', 'manuele');
+    orderPizza('golden', 'students');
 }
 
 function makeEveryoneHappy($orderPizzaForClass)
