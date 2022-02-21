@@ -57,9 +57,16 @@ You're hooked, huh?
 ## Deliverables
 1. Publish your source code on the GitHub repository.
 2. Pimp up the readme file:
-	- What, Why, When, How, Who.
-	- Pending things to do (if any)
+    - What, Why, When, How, Who.
+    - Pending things to do (if any)
 3. Add the link to your exercise overview
+
+## What I do
+1. I start from the most outer function and start getting inside it. Clicking on the function to take me there. I look at the function name and make sure it makes sense. If it has variables or parameters I give them a meaningful name. E.g.: $p_type --> $pizzaType.
+2. After changing all the function, parameter and variable names I look at the structure of the prints. I make them as readable as possible with indents and spaces.
+3. For strings, I use double quotes instead of one. I use double quotes for strings and single quotes for characters.
+
+GitHub source link: <https://github.com/Muhammetacin/Refactor-php-code>
 
 ## Clean that dirty code
 
