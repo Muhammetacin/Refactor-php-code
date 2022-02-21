@@ -37,7 +37,7 @@ function calculateCost($pizzaType)
     } else if ($pizzaType === 'calzone') {
         $costPrice = 10;
     } else if ($pizzaType === 'hawaii') {
-        throw new Exception('There is no pizza type "Hawaii".');
+        throw new Exception('There is no pizza type \'Hawaii\'.');
     }
 
     return $costPrice;
