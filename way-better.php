@@ -16,7 +16,7 @@ function orderPizza($pizzaType, $client)
     }
 
     $printAddress = 'The address is: ' . $clientAddress . '.';
-    $printPrice = 'The bill is € ' . $pizzaPrice . '.';
+    $printPrice = 'The bill is €' . $pizzaPrice . '.';
 
     $printOrder = 'A ' . $pizzaType . ' pizza should be sent to ' . $client . '.<br>'
         . $printAddress . '<br>'
