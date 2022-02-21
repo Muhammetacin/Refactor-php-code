@@ -5,7 +5,7 @@ function orderPizza($pizzaType, $client)
     echo '<strong>Creating new order...</strong><br><br>';
 
     $pizzaPrice = calculateCost($pizzaType);
-    $clientAddress = 'unknown';
+    $clientAddress = 'No valid client address.';
 
     if ($client === 'koen') {
         $clientAddress = 'a yacht in Antwerp';
