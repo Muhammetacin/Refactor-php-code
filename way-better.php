@@ -28,19 +28,16 @@ function orderPizza($pizzaType, $client)
 
 function calculateCost($pizzaType)
 {
-    $costPrice = 0;
-
-    if ($pizzaType === 'marguerita') {
-        $costPrice = 5;
-    } else if ($pizzaType === 'golden') {
-        $costPrice = 100;
-    } else if ($pizzaType === 'calzone') {
-        $costPrice = 10;
-    } else if ($pizzaType === 'hawaii') {
-        throw new Exception('There is no pizza type \'Hawaii\'.');
+    switch ($pizzaType) {
+        case 'marguerita':
+            return 5;
+        case 'golden':
+            return 100;
+        case 'calzone':
+            return 10;
+        case 'hawaii':
+            throw new Exception('Computer says no');
     }
-
-    return $costPrice;
 }
 
 function orderPizzaForAll()
@@ -50,13 +47,4 @@ function orderPizzaForAll()
     orderPizza('golden', 'students');
 }
 
-function makeEveryoneHappy($orderPizzaForClass)
-{
-    if ($orderPizzaForClass) {
-        orderPizzaForAll();
-        return true;
-    }
-    return false;
-}
-
-makeEveryoneHappy(true);
+orderPizzaForAll();
